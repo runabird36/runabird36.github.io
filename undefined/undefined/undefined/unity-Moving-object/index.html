@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2018 | SSong&#39;s Memory</title>
+  <title>unity_Moving_object | SSong&#39;s Memory</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -157,96 +157,143 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img_2.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2><style>h3{color:white}</style><h3>SSong's Memory</h3></h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/undefined/undefined/undefined/unity-Moving-object/">unity_Moving_object</a></h4>
-                            
-                            <p><time datetime="2018-09-04T10:50:15.000Z"><a href="/undefined/undefined/undefined/unity-Moving-object/">2018-09-04</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/undefined/undefined/undefined/unity-intro/">unity_intro</a></h4>
-                            
-                            <p><time datetime="2018-09-04T10:42:26.000Z"><a href="/undefined/undefined/undefined/unity-intro/">2018-09-04</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/undefined/undefined/undefined/post-clean-blog/">My first Hexo Blog</a></h4>
-                            
-                            <p><time datetime="2018-08-31T07:33:36.000Z"><a href="/undefined/undefined/undefined/post-clean-blog/">2018-08-31</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/undefined/undefined/undefined/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2018-08-31T06:45:06.306Z"><a href="/undefined/undefined/undefined/hello-world/">2018-08-31</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-09-04T10:50:15.000Z" itemprop="datePublished">
+          2018-09-04
+      </time>
+    
+    
+    | 
+    <a href='/tags/Unity/'>Unity</a>,
+    
+    <a href='/tags/Flying/'>Flying</a>,
+    
+    <a href='/tags/transform/'>transform</a>,
+    
+    <a href='/tags/Input/'>Input</a>,
+    
+    <a href='/tags/KeyCode/'>KeyCode</a>
+    
+    
+</span>
+                <h1>unity_Moving_object</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><p>transform component &amp; translate    &amp; rotate<br><strong>Input class</strong><br>Keycode<br><strong>Vector3</strong>foward,back,left,right,…<br>enum</p>
+<h1 id="C-Enum"><a href="#C-Enum" class="headerlink" title="C#_Enum"></a>C#_Enum</h1><pre><code>public enum PINGPONG_DIRECTION { UP, DOWN }
+public enum START_END { startGame, doGame} 
+</code></pre><h1 id="Code-Take-off-and-Flying-bird"><a href="#Code-Take-off-and-Flying-bird" class="headerlink" title="Code_Take off and Flying bird"></a>Code_Take off and Flying bird</h1><pre><code>//Taking off part
+if (_progress == START_END.startGame)
+        {
+            if (tr.position.z &lt; 30)
+            {
+                _currentPos.z += _birdSpeed*Time.deltaTime;
+                tr.position = _currentPos;
+            }
+            else
+            {
+                _currentPos.z += _birdSpeed * Time.deltaTime;
+                _currentPos.y += _birdSpeed * Time.deltaTime;
+                tr.position = _currentPos;
+            }
+            //It&apos;s not good to make &quot;Magic number&quot;
+            if (tr.position.z &gt; 100 &amp;&amp; tr.position.y &gt; 100)
+                _progress = START_END.doGame;
+        }
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+
+
+//Flying up and down part
+        else if (_progress == START_END.doGame)
+        {
+            _currentPos = transform.position;
+            if (_direction == PINGPONG_DIRECTION.UP)
+            {
+                if (_currentPos.y &lt; _limitUp)
+                    _currentPos.y += _pingpongSpeed * Time.deltaTime;
+                else
+                    _direction = PINGPONG_DIRECTION.DOWN;
+            }
+            else if (_direction == PINGPONG_DIRECTION.DOWN)
+            {
+                if (_currentPos.y &gt; _limitDown)
+                    _currentPos.y -= _pingpongSpeed * Time.deltaTime;
+                else
+                    _direction = PINGPONG_DIRECTION.UP;
+            }
+</code></pre>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/undefined/undefined/undefined/unity-intro/">
+        unity_intro →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
