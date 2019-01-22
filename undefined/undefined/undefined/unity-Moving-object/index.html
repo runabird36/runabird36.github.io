@@ -92,6 +92,8 @@
 				    
 				    <li><a href="/categories/MyWork/" class="animsition-link">MyWork<small>(2)</small></a></li>
 				    
+				    <li><a href="/categories/Portfolio-programming/" class="animsition-link">Portfolio_programming<small>(1)</small></a></li>
+				    
 				    <li><a href="/categories/Unity/" class="animsition-link">Unity<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/Unreal/" class="animsition-link">Unreal<small>(1)</small></a></li>
@@ -197,10 +199,18 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h1><p>transform component &amp; translate    &amp; rotate<br><strong>Input class</strong><br>Keycode<br><strong>Vector3</strong>foward,back,left,right,…<br>enum</p>
-<h1 id="C-Enum"><a href="#C-Enum" class="headerlink" title="C#_Enum"></a>C#_Enum</h1><pre><code>public enum PINGPONG_DIRECTION { UP, DOWN }
+      		<h1 id="keyword"><a class="markdownIt-Anchor" href="#keyword"></a> Keyword</h1>
+<p>transform component &amp; translate	&amp; rotate		<br>
+<strong>Input class</strong><br>
+Keycode<br>
+<strong>Vector3</strong>foward,back,left,right,…<br>
+enum</p>
+<h1 id="c_enum"><a class="markdownIt-Anchor" href="#c_enum"></a> C#_Enum</h1>
+<pre><code>public enum PINGPONG_DIRECTION { UP, DOWN }
 public enum START_END { startGame, doGame} 
-</code></pre><h1 id="Code-Take-off-and-Flying-bird"><a href="#Code-Take-off-and-Flying-bird" class="headerlink" title="Code_Take off and Flying bird"></a>Code_Take off and Flying bird</h1><pre><code>//Taking off part
+</code></pre>
+<h1 id="code_take-off-and-flying-bird"><a class="markdownIt-Anchor" href="#code_take-off-and-flying-bird"></a> Code_Take off and Flying bird</h1>
+<pre><code>//Taking off part
 if (_progress == START_END.startGame)
         {
             if (tr.position.z &lt; 30)
@@ -214,7 +224,7 @@ if (_progress == START_END.startGame)
                 _currentPos.y += _birdSpeed * Time.deltaTime;
                 tr.position = _currentPos;
             }
-            //It&apos;s not good to make &quot;Magic number&quot;
+			//It's not good to make &quot;Magic number&quot;
             if (tr.position.z &gt; 100 &amp;&amp; tr.position.y &gt; 100)
                 _progress = START_END.doGame;
         }
@@ -240,6 +250,7 @@ if (_progress == START_END.startGame)
                     _direction = PINGPONG_DIRECTION.UP;
             }
 </code></pre>
+
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
