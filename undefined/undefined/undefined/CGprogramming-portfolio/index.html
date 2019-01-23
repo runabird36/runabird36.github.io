@@ -176,7 +176,7 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="summary"><a class="markdownIt-Anchor" href="#summary"></a> Summary</h1>
+      		<h2 id="summary"><a class="markdownIt-Anchor" href="#summary"></a> Summary</h2>
 <p>In this course, I did six assignments.</p>
 <ol>
 <li>Just draw circle made of lots of triangle</li>
@@ -188,11 +188,14 @@
 </ol>
 <p>I upload result video and sixth real code.</p>
 <hr>
-<h1 id="result-video"><a class="markdownIt-Anchor" href="#result-video"></a> Result video</h1>
+<h2 id="language-and-software"><a class="markdownIt-Anchor" href="#language-and-software"></a> Language and Software</h2>
+<p>C++, visual studio</p>
+<hr>
+<h2 id="result-video"><a class="markdownIt-Anchor" href="#result-video"></a> Result video</h2>
 <p><a href="https://youtu.be/G3IzZyQKpiU" target="_blank" rel="noopener">https://youtu.be/G3IzZyQKpiU</a></p>
 <div class="video-container"><iframe src="//www.youtube.com/embed/G3IzZyQKpiU" frameborder="0" allowfullscreen></iframe></div>
 <hr>
-<h1 id="sixth-shadow-codeexcept-shader-code"><a class="markdownIt-Anchor" href="#sixth-shadow-codeexcept-shader-code"></a> Sixth shadow code(except shader code)</h1>
+<h2 id="sixth-shadow-codeexcept-shader-code"><a class="markdownIt-Anchor" href="#sixth-shadow-codeexcept-shader-code"></a> Sixth shadow code(except shader code)</h2>
 <pre><code>#include &quot;stdafx.h&quot;
 #include &lt;stdlib.h&gt;
 #include&lt;GL/glew.h&gt;
@@ -284,10 +287,10 @@ while (!glfwWindowShouldClose(window)) {
 glfwDestroyWindow(window);
 glfwTerminate();
 }
-GLuint vertexBuffer = 0;	//bind�� ���ؼ� ����
+GLuint vertexBuffer = 0;
 GLuint normalBuffer = 0;
 GLuint texCoordBuffer = 0;
-GLuint vertexArrayID = 0;	//bind�� ���ؼ� ����
+GLuint vertexArrayID = 0;	
 GLuint elementArray = 0;
 GLuint textureID = 0;
 GLuint bumpID = 0;
@@ -324,15 +327,15 @@ glBindBuffer(GL_ARRAY_BUFFER, texCoordBuffer);
 glBufferData(GL_ARRAY_BUFFER, nVertices[0] * sizeof(glm::vec2), texCoords[0], GL_STATIC_DRAW);
 
 
-glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);//vertex��ǥ ����
+glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
 glEnableVertexAttribArray(0);
 glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
-glBindBuffer(GL_ARRAY_BUFFER, normalBuffer);//normal ����
+glBindBuffer(GL_ARRAY_BUFFER, normalBuffer);
 glEnableVertexAttribArray(1);
 glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
-glBindBuffer(GL_ARRAY_BUFFER, texCoordBuffer);//model�� �������ִ� uv��ǥ ����
+glBindBuffer(GL_ARRAY_BUFFER, texCoordBuffer);
 glEnableVertexAttribArray(2);
 glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, 0);
 
@@ -347,7 +350,7 @@ void* buf = stbi_load(&quot;dwarfD.jpg&quot;, &amp;w, &amp;h, &amp;n, 4); // n m
 //Generate texture &amp; set parameters
 glGenTextures(1, &amp;textureID);
 glBindTexture(GL_TEXTURE_2D, textureID);										
-glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);	//mip-mapping �Ҷ� linear�ϰ� ��ճ��� ����ϰڴ�. ��� �ǹ�
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);	
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -486,7 +489,7 @@ glfwSwapBuffers(window);
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
     <a class="pull-left" href="/undefined/undefined/undefined/Modeling-Texturing-2/" style="float: left;">
-        ← 2. Modeling&Texturing
+        ← 2.Modeling&Texturing
     </a>
     
     
