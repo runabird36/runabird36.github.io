@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>2. Data Structure | Taiyeong.Song, Pipeline TD Home</title>
+  <title>[Programming Work] Data Structure | Taiyeong.Song, Pipeline TD Home</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -82,9 +82,9 @@
 				  	
 				    <li><a href="/categories/Others/" class="animsition-link">Others<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/Portfolio-Art/" class="animsition-link">Portfolio_Art<small>(5)</small></a></li>
+				    <li><a href="/categories/Pipeline-TD-work/" class="animsition-link">Pipeline TD work<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/Portfolio-programming/" class="animsition-link">Portfolio_programming<small>(5)</small></a></li>
+				    <li><a href="/categories/University-Work/" class="animsition-link">University Work<small>(6)</small></a></li>
 				    
 				</ul>
         	</li>
@@ -161,13 +161,14 @@
       </time>
     
 </span>
-                <h1>2. Data Structure</h1>
+                <h1>[Programming Work] Data Structure</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>I did a lot of assignments and List below is the result.<br>Because there are many assignment, I upload two assignments code out of them.<br>The first is about calculator with two stack<br>The second is about tree traversal(inorder, preorder, postorder)</p>
+      		<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>I did a lot of data structure assignments which are listed below. </p>
+<p>The first is about calculator with two stack<br>The second is about tree traversal(inorder, preorder, postorder)</p>
 <p><img src="https://user-images.githubusercontent.com/34437660/51545796-1bb8a180-1ea6-11e9-8c52-e0f571f58f29.png" alt="4"></p>
-<h1 id="Calculator-with-two-stack"><a href="#Calculator-with-two-stack" class="headerlink" title="Calculator with two stack"></a>Calculator with two stack</h1><pre><code>from ArrayStack import *
+<h3 id="Calculator-with-two-stack"><a href="#Calculator-with-two-stack" class="headerlink" title="Calculator with two stack"></a>Calculator with two stack</h3><pre><code>from ArrayStack import *
 import operator
 
 valStack = ArrayStack()
@@ -191,9 +192,9 @@ def doOp():
     x= valStack.pop()
     y = valStack.pop()
     op = opStack.pop()
-
+    
     valStack.push(ops[op](int(y),int(x)))
-
+    
 def repeatOps(e):
     if opStack.is_empty():
         return None
@@ -218,7 +219,8 @@ def main():
     print(evalExp(&quot;3+4*5-9*3&quot;))
 
 if __name__ == &quot;__main__&quot;:
-    main()</code></pre>
+    main()
+</code></pre>
 <h1 id="Tree-traversal"><a href="#Tree-traversal" class="headerlink" title="Tree traversal"></a>Tree traversal</h1><pre><code>**traversal** 
 def inorder(self):
     if self._left:
@@ -396,20 +398,21 @@ def postorder_next(self):
                 iter = iter._left
             return iter
         elif self._parent._right == self:
-            return self._parent</code></pre>
+            return self._parent
+</code></pre>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/01/23/Database-portfolio/" style="float: left;">
-        ← 3. Database_portfolio
+    <a class="pull-left" href="/2019/01/23/CGprogramming-portfolio/" style="float: left;">
+        ← [Programming Work] Computer Graphics
     </a>
     
     
     <a class="pull-right" href="/2019/01/22/C-Game-portfolio/">
-        1.C++_Game_portfolio →
+        [Programming Work] C++_Game_portfolio →
     </a>
     
 </nav>

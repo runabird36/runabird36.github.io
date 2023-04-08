@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>5.Computer Graphics | Taiyeong.Song, Pipeline TD Home</title>
+  <title>[Programming Work] Computer Graphics | Taiyeong.Song, Pipeline TD Home</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -82,9 +82,9 @@
 				  	
 				    <li><a href="/categories/Others/" class="animsition-link">Others<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/Portfolio-Art/" class="animsition-link">Portfolio_Art<small>(5)</small></a></li>
+				    <li><a href="/categories/Pipeline-TD-work/" class="animsition-link">Pipeline TD work<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/Portfolio-programming/" class="animsition-link">Portfolio_programming<small>(5)</small></a></li>
+				    <li><a href="/categories/University-Work/" class="animsition-link">University Work<small>(6)</small></a></li>
 				    
 				</ul>
         	</li>
@@ -160,8 +160,13 @@
           2019-01-23
       </time>
     
+    
+    | 
+    <a href='/tags/School-work/'>School work</a>
+    
+    
 </span>
-                <h1>5.Computer Graphics</h1>
+                <h1>[Programming Work] Computer Graphics</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
@@ -213,7 +218,7 @@ void cursorPosCB(GLFWwindow* window, double x, double y) &#123;
         glfwGetWindowSize(window, &amp;width, &amp;height);
         float dx = (x - lastX)/width;
         float dy = (y - lastY)/height;
-
+    
     theta += -dx*3.141592f;
     phi   += -dy * 3.141592f;
     if (phi &gt; 1.4) phi = 1.4f;
@@ -246,29 +251,29 @@ void scrollCB(GLFWwindow* window, double, double y) &#123;
 &#125;
 
 int main(void) &#123;
-    if (!glfwInit())                                        
+    if (!glfwInit())										
         exit(EXIT_FAILURE);
-#ifdef __APPLE__    
-    GLFWwindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);            
+#ifdef __APPLE__	
+    GLFWwindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);			
     GLFWwindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
     GLFWwindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     GLFWwindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 #endif
-    glfwWindowHint(GLFW_SAMPLES, 4);        
+    glfwWindowHint(GLFW_SAMPLES, 4);		
 
 GLFWwindow* window = glfwCreateWindow(640, 640, &quot;Hello&quot;, NULL, NULL);
-glfwSetCursorPosCallback(window, cursorPosCB);                        
-
+glfwSetCursorPosCallback(window, cursorPosCB);						
+                                                                    
 glfwSetMouseButtonCallback(window, mouseButtonCB);
 glfwSetScrollCallback(window, scrollCB);
-glfwMakeContextCurrent(window);                                        
+glfwMakeContextCurrent(window);										
 
 glewInit();
 init();
 glfwSwapInterval(1);
-while (!glfwWindowShouldClose(window)) &#123;                            
-    render(window);                                                    
-    glfwPollEvents();                                                        
+while (!glfwWindowShouldClose(window)) &#123;							
+    render(window);													
+    glfwPollEvents();														
 &#125;
 glfwDestroyWindow(window);
 glfwTerminate();
@@ -276,7 +281,7 @@ glfwTerminate();
 GLuint vertexBuffer = 0;
 GLuint normalBuffer = 0;
 GLuint texCoordBuffer = 0;
-GLuint vertexArrayID = 0;    
+GLuint vertexArrayID = 0;	
 GLuint elementArray = 0;
 GLuint textureID = 0;
 GLuint bumpID = 0;
@@ -335,8 +340,8 @@ void* buf = stbi_load(&quot;dwarfD.jpg&quot;, &amp;w, &amp;h, &amp;n, 4); // n m
 
 //Generate texture &amp; set parameters
 glGenTextures(1, &amp;textureID);
-glBindTexture(GL_TEXTURE_2D, textureID);                                        
-glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);    
+glBindTexture(GL_TEXTURE_2D, textureID);										
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);	
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -423,7 +428,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 glUseProgram(prog.programID);
 
-mat4 rotMat = rotate(0 * 3.14159f / 180, glm::vec3(1, 0, 0));         
+mat4 rotMat = rotate(0 * 3.14159f / 180, glm::vec3(1, 0, 0)); 		
 #pragma region LinkMatrix
     loc = glGetUniformLocation(prog.programID, &quot;rotMT&quot;);
     glUniformMatrix4fv(loc, 1, false, value_ptr(rotMat));
@@ -461,12 +466,15 @@ loc = glGetUniformLocation(prog.programID, &quot;shadowMap&quot;);
 glUniform1i(loc, 2);
 
 //Draw!
-glBindVertexArray(vertexArrayID);                    
+glBindVertexArray(vertexArrayID);					
 glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vertexArrayID);
 glDrawElements(GL_TRIANGLES, nTriangles[0] * 3, GL_UNSIGNED_INT, 0);
 
-glfwSwapBuffers(window);                
-&#125;</code></pre>
+glfwSwapBuffers(window);				
+&#125;
+
+                                        
+</code></pre>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
@@ -474,12 +482,12 @@ glfwSwapBuffers(window);
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
     <a class="pull-left" href="/2019/01/23/Modeling-Texturing-2/" style="float: left;">
-        ← 2.Modeling&Texturing
+        ← [Art Work] Modeling&Texturing
     </a>
     
     
-    <a class="pull-right" href="/2019/01/23/MobileProgramming-portfolio/">
-        4. MobileProgramming →
+    <a class="pull-right" href="/2019/01/23/DataStructure-portfolio/">
+        [Programming Work] Data Structure →
     </a>
     
 </nav>
