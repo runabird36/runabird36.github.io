@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: batch | Taiyeong.Song, Pipeline TD Home</title>
+  <title>[pipeline] Yeti workflow | Taiyeong.Song, Pipeline TD Home</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -152,69 +152,172 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img_2_alpha_partial.png) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2><style>h3{color:#c4c4c4}</style><h3>Taiyeong.Song, Pipeline TD</h3></h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p><style>h4{color:#b3b3b3}</style><h4>welcome! I am pipeline TD in VFX, and this place is for sharing my work. Thanks for watching</h4></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2023/05/22/pipe-yeti-fur-batch/">[ pipeline ] Bake Yeti fur cache - batch mode</a></h4>
-                            
-                            <p><time datetime="2023-05-22T08:21:14.000Z"><a href="/2023/05/22/pipe-yeti-fur-batch/">2023-05-22</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2023-06-04T13:20:48.000Z" itemprop="datePublished">
+          2023-06-04
+      </time>
+    
+</span>
+                <h1>[pipeline] Yeti workflow</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<hr>
+<p><img src="/../img/crowd_whole02.png" alt="yeti_whole"></p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>approximately 7500 character render</li>
+<li>Data which in used : <ul>
+<li>crowd : exported from golaem in aistandin</li>
+<li>lookdev : exported with aistandin (arnold scene description data)</li>
+<li>arnold operator nodes : assign lookdev to crowd cache data</li>
+</ul>
+</li>
+</ul>
+</br>
+</br>
+</br>
+</br>
+</br>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+<hr>
+<h2 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h2><ul>
+<li>A. developed tools for work<blockquote>
+<p><img src="/../img/Operator_07.png" alt="dev tools"></p>
+</blockquote>
+</li>
+</ul>
+</br>
+</br>
+
+<ul>
+<li>B. Each asset operator node tree<ul>
+<li>Selection : grouping shapes that is assigned to same material</li>
+<li>Assignment Information : link between above selections and material</li>
+<li>merge : merge all node</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<img src="../img/Operator_05.png" width="370" height="550">
+</blockquote>
+</br>
+</br>
+
+<ul>
+<li>C. all materials informations<ul>
+<li>export all asset’s lookdev into aistandin format (.ass)</li>
+<li>and then import with aiInclude operator node</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<img src="../img/Operator_08.png">
+</blockquote>
+</br>
+</br>
+
+<ul>
+<li>D. merge all asset’s node tree and all materials, and then connect to crowd aistandin node</li>
+</ul>
+<blockquote>
+<img src="../img/Operator_04.png" width="450" height="550">
+</blockquote>
+</br>
+</br>
+
+<ul>
+<li>E. render results<ul>
+<li>In hypershade window, we could find that there is no materials and texture nodes</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<img src="../img/Operator_01.png" >
+</blockquote>
+</br>
+</br>
+
+<ul>
+<li>F. Zoom in and render results<ul>
+<li>render time : 00:01:05</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<img src="../img/Operator_03_render.png" >
+</blockquote>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2023/05/22/assetlibrary-houdini/">
+        [ pipeline ] Assetlibrary - Import to houdini →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
