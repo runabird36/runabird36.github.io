@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2023/6 | Taiyeong.Song, Pipeline TD Home</title>
+  <title>[ pipeline ]  houdini in external python | Taiyeong.Song, Pipeline TD Home</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -152,78 +152,117 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img_2_alpha_partial.png) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2><style>h3{color:#c4c4c4}</style><h3>Taiyeong.Song, Pipeline TD</h3></h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p><style>h4{color:#b3b3b3}</style><h4>welcome! I am pipeline TD in VFX, and this place is for sharing my work. Thanks for watching</h4></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2023/06/04/crowd-with-operator-md/">[pipeline] Operator and Crowd</a></h4>
-                            
-                            <p><time datetime="2023-06-04T13:20:48.000Z"><a href="/2023/06/04/crowd-with-operator-md/">2023-06-04</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2023/06/02/houdini-external-python/">[ pipeline ]  houdini in external python</a></h4>
-                            
-                            <p><time datetime="2023-06-02T08:15:35.000Z"><a href="/2023/06/02/houdini-external-python/">2023-06-02</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2023-06-02T08:15:35.000Z" itemprop="datePublished">
+          2023-06-02
+      </time>
+    
+</span>
+                <h1>[ pipeline ]  houdini in external python</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="Houdini-connection-R-amp-D"><a href="#Houdini-connection-R-amp-D" class="headerlink" title="[Houdini connection R&amp;D]"></a>[Houdini connection R&amp;D]</h2></br>
+</br>
+</br>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+<h4 id="lt-Keywords-gt"><a href="#lt-Keywords-gt" class="headerlink" title="&lt; Keywords &gt;"></a>&lt; Keywords &gt;</h4><ul>
+<li>houdini openport example</li>
+</ul>
+<h4 id="lt-Documentation-gt"><a href="#lt-Documentation-gt" class="headerlink" title="&lt; Documentation &gt;"></a>&lt; Documentation &gt;</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://www.sidefx.com/forum/topic/46759/?page=1#post-384035">OpenPort and communicate via Python</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.sidefx.com/docs/houdini/hom/rpc.html">houdini RPC docs</a></li>
+</ul>
+<h4 id="lt-Contents-gt"><a href="#lt-Contents-gt" class="headerlink" title="&lt; Contents &gt;"></a>&lt; Contents &gt;</h4><ul>
+<li>hrpyc is wrapper version of python rpyc library</li>
+<li>Like below, connection is possible with only python rpyc module<br>(아래와 같이 rpyc 만 사용해도 실제로 stdout 문자열 통신이 가능하다)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">con  = rpyc.classic.connect(&quot;localhost&quot;, 18811)</span><br><span class="line">rsys = con.modules.sys</span><br><span class="line">rsys.stdout.write(&quot;hello world!!&quot;)</span><br></pre></td></tr></table></figure></li>
+<li>How to use<ul>
+<li><p>step01 . In houdini</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import hrpyc</span><br><span class="line">hrpyc.start_server() # default : 127.0.0.1:18811</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>step02. In external python</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import socket, sys</span><br><span class="line">sys.path.append(&quot;/opt/hfs19.5/houdini/python3.9libs&quot;)</span><br><span class="line">import rpyc</span><br><span class="line">import hrpyc</span><br><span class="line">connection, hou = hrpyc.import_remote_module()</span><br><span class="line">hou.node(&quot;/obj&quot;).createNode(&quot;geo&quot;)</span><br></pre></td></tr></table></figure>
+<p>  With this, Could use hou commands in external python.</p>
+</li>
+</ul>
+</li>
+</ul>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2023/06/04/crowd-with-operator-md/" style="float: left;">
+        ← [pipeline] Operator and Crowd
+    </a>
+    
+    
+    <a class="pull-right" href="/2023/05/22/assetlibrary-houdini/">
+        [ pipeline ] Assetlibrary - Import to houdini →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
