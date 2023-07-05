@@ -174,10 +174,12 @@
 <h4 id="lt-Keywords-gt"><a href="#lt-Keywords-gt" class="headerlink" title="&lt; Keywords &gt;"></a>&lt; Keywords &gt;</h4><ul>
 <li>houdini openport example</li>
 </ul>
-<h4 id="lt-Documentation-gt"><a href="#lt-Documentation-gt" class="headerlink" title="&lt; Documentation &gt;"></a>&lt; Documentation &gt;</h4><ul>
-<li><a target="_blank" rel="noopener" href="https://www.sidefx.com/forum/topic/46759/?page=1#post-384035">OpenPort and communicate via Python</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sidefx.com/docs/houdini/hom/rpc.html">houdini RPC docs</a></li>
-</ul>
+<h4 id="lt-Documentation-gt"><a href="#lt-Documentation-gt" class="headerlink" title="&lt; Documentation &gt;"></a>&lt; Documentation &gt;</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.sidefx.com/forum/topic/46759/?page=1#post-384035">OpenPort and communicate via Python</a></p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.sidefx.com/docs/houdini/hom/rpc.html">houdini RPC docs</a></p>
+</blockquote>
 <h4 id="lt-Contents-gt"><a href="#lt-Contents-gt" class="headerlink" title="&lt; Contents &gt;"></a>&lt; Contents &gt;</h4><ul>
 <li>hrpyc is wrapper version of python rpyc library</li>
 <li>Like below, connection is possible with only python rpyc module<br>(아래와 같이 rpyc 만 사용해도 실제로 stdout 문자열 통신이 가능하다)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">con  = rpyc.classic.connect(&quot;localhost&quot;, 18811)</span><br><span class="line">rsys = con.modules.sys</span><br><span class="line">rsys.stdout.write(&quot;hello world!!&quot;)</span><br></pre></td></tr></table></figure></li>
