@@ -8,7 +8,7 @@ tags: ["Katana", "lua", "Python", "Math"]
 ---
 
 
-![banner](../assets/images/img/cfx_hair_supertools_001.png)
+<!-- ![banner](../assets/images/img/cfx_hair_supertools_001.png) -->
 
 ## summary
 - Category : Katana plugin
