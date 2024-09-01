@@ -3,12 +3,13 @@ layout: post
 title: KATANA plugins - hair
 subtitle: three types of supertools
 excerpt_image: ../assets/images/img/cfx_hair_supertools_001.png
-categories: pipeline
+categories: Pipeline
 tags: ["Katana", "lua", "Python", "Math"]
+top: 1
 ---
 
 
-![banner](../assets/images/img/cfx_hair_supertools_001.png)
+![banner](/assets/images/img/cfx_hair_supertools_002.png)
 
 ## summary
 - Category : Katana plugin

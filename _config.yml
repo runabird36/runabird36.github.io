@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Weaver
+title: Tai Yeong . Song
 email: runabird36@gmail.com
 author: runabird36
 
@@ -108,7 +108,7 @@ yat:
 # spacegrey: #353535
 # snowwhite: #ffffff
 #
-theme_color: snowwhite
+# theme_color: snowwhite
 #
 # Custom color as below:
 # theme_color: "#882250"
