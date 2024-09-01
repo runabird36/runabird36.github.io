@@ -5,7 +5,6 @@ subtitle: bake fur cache in parallel
 excerpt_image: https://github.com/runabird36/runabird36.github.io/assets/34437660/4048431a-5089-4038-8b7e-6888a26c00f3
 categories: Pipeline
 tags: ["yeti", "batch", "multi-processing"]
-top: 3
 ---
 
 

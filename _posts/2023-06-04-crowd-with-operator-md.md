@@ -5,7 +5,6 @@ subtitle: assign shaders to crowd cache using operator
 excerpt_image: ../assets/images/img/Operator_01.png
 categories: Pipeline
 tags: ["Crowd", "Maya", "Arnold", "Render Procedural", "Operator"]
-top: 3
 ---
 
 

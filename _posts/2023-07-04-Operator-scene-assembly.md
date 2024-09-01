@@ -5,7 +5,6 @@ subtitle: assemble scene data using arnold operator
 excerpt_image: ../assets/images/img/OTX_summary_img.png
 categories: Pipeline
 tags: ["Arnold", "Maya", "Operator", "Render Procedural"]
-top: 3
 ---
 
 

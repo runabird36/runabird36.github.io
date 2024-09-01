@@ -5,7 +5,6 @@ subtitle: Design workflow and develop
 excerpt_image: https://github.com/runabird36/runabird36.github.io/assets/34437660/03072f0d-cb60-42ed-9c02-0b1b966ab5c2
 categories: Pipeline
 tags: ["Yeti", "Hair", "Maya"]
-top: 3
 ---
 
 

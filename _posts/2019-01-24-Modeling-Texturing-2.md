@@ -2,10 +2,9 @@
 layout: post
 title: CG Work - Modeling&Texturing
 subtitle: To understand artist's workflow
-excerpt_image: ../assets/images/img/fx_work.jpg
+excerpt_image: ../assets/images/img/cg_mdl_ldv_007.png
 categories: "cg"
 tags: ["Maya", "substance painter", "modeling","Lookdev"]
-top: 3
 ---
 
 
