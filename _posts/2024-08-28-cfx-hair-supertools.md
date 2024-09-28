@@ -24,7 +24,7 @@ top: 1
 ---
 
 ## Optimization
-- Issue : deformation calculation time is too long when move on each frame.
+- Issue : deformation calculation time is too long when move frame one by one.
 - Solution : Implement deformation formula using C++
 - Performance comparison. 
   - feel free to refer to attached images which show 'Render performance' in katana (if you click image, you can zoom in )
