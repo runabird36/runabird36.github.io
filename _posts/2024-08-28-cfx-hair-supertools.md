@@ -31,16 +31,18 @@ top: 1
 
 | Spec of Character | using lua script | using C++ |
 | ----------------- | ---------------- | --------- |
-| - Character A <br> - point count : **37,180,792** <br> - strand count : **3,380,072** | - Elapsed Time : **15 mins** <br> ![CharALua](/assets/images/img/char_A_lua.PNG) | - Elapsed Time : **28.73 sec** <br> ![CharACpp](/assets/images/img/char_A_cpp.PNG) |
-| - Character B <br> - point count : **5,465,140** <br> - strand count : **1,477,814** | - Elapsed Time : **2 mins** <br> ![CharALua](/assets/images/img/char_B_lua.PNG) | - Elapsed Time : **6.02 sec** ![CharACpp](/assets/images/img/char_B_cpp.PNG) |
+| <span style="display:block; text-align:center;">- Character A <br> - point count : **37,180,792** <br> - strand count : **3,380,072**</span> | - Elapsed Time : **15 mins** <br> ![CharALua](/assets/images/img/char_A_lua.PNG) | - Elapsed Time : **28.73 sec** <br> ![CharACpp](/assets/images/img/char_A_cpp.PNG) |
+| <span style="display:block; text-align:center;">- Character B <br> - point count : **5,465,140** <br> - strand count : **1,477,814**</span> | - Elapsed Time : **2 mins** <br> ![CharALua](/assets/images/img/char_B_lua.PNG) | - Elapsed Time : **6.02 sec** ![CharACpp](/assets/images/img/char_B_cpp.PNG) |
 
 
 
 ## Demonstration
+- Data : simple demo character
 
 <iframe width="650" height="405" src="https://www.youtube.com/embed/KuFu3CsN1XI?si=Re3n1-9RRBcuYu23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Render results
+- Data : simple demo character
 
 <iframe width="650" height="405" src="https://www.youtube.com/embed/Nz1TM1Bx6HA?si=qsFgU1II_wzTKL-1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
