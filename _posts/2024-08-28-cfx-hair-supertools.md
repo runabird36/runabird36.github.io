@@ -4,7 +4,7 @@ title: KATANA plugins - hair
 subtitle: three types of supertools
 excerpt_image: ../assets/images/img/cfx_hair_supertools_001.png
 categories: Pipeline
-tags: ["Katana", "lua", "Python", "Math"]
+tags: ["Katana", "C++", "lua", "Python", "Math"]
 top: 1
 ---
 
