@@ -14,12 +14,21 @@ top: 1
 ## summary
 - Category : Katana plugin
 - Plugin list
-  - TweakHair : tweak hair parameters (density / length / thickness / root thickness / tip thickness)
-  - SimGuideDeform : deform static hair based on simulated guides
-  - GuideDeform : deform static hair based on animated meshes
+  - **TweakHair** : tweak hair parameters (density / length / thickness / root thickness / tip thickness)
+  - **SimGuideDeform** : deform static hair based on simulated guides
+  - **GuideDeform** : deform static hair based on animated meshes
+- Features
+  - **GuideRotationOffset** : the offset that rotate the points of guide after the deformation proces
+  - **MeshPointOffset** : the offset that move points of mesh after the deformation process
 
 
 
+## Offset Features
+- When an animated mesh is **stretched too much**, Guides penetrate the mesh. and This is when offset features are needed
+  
+| Deformation Only | applying MeshPointOffset | applying GuideRotationOffset |
+| ---------------- | ------------------------ | ---------------------------- |
+| ![origin](/assets/images/img/offset_001.png) | ![meshPointOffset](/assets/images/img/offset_002.png) | ![GuideRotationOffset](/assets/images/img/offset_003.png) |
 
 ---
 
