@@ -5,7 +5,7 @@ subtitle: understanding how render works
 excerpt_image: ../assets/images/img/computer_graphics_001.png
 categories: "university"
 tags: ["DirectX", "C++", "CG"]
-top: 5
+top: 6
 ---
 
 ## Summary

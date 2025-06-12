@@ -1,11 +1,11 @@
 ---
 layout: post
-title: KATANA plugins - hair
+title: KATANA plugins - Hair/Fur deformer
 subtitle: three types of supertools
 excerpt_image: ../assets/images/img/cfx_hair_supertools_001.png
 categories: Pipeline
 tags: ["Katana", "C++", "lua", "Python", "Math"]
-top: 1
+top: 2
 ---
 
 

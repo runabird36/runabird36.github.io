@@ -5,7 +5,7 @@ subtitle: build usd using python from MDL to Crowd
 excerpt_image: ../assets/images/img/magician_group.png
 categories: Pipeline
 tags: ["Houdini", "Maya", "USD", "Python"]
-top: 2
+top: 3
 ---
 
 > <iframe title="vimeo-player" src="https://player.vimeo.com/video/870657351?h=61d3eb02ff" width="700" height="420" frameborder="0"    allowfullscreen></iframe>
